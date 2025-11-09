@@ -38,7 +38,7 @@ export default function Globe3D({ from, to, arcPoints, sun, onHoverProgress }: P
   useEffect(() => {
     if (!containerRef.current) return;
 
-    const globe = Globe({ waitForGlobeReady: true })(containerRef.current)
+    const globe = Globe({ waitForGlobeReady: false })(containerRef.current)
       .backgroundColor("rgba(0,0,0,0)")
       .globeImageUrl("https://unpkg.com/three-globe/example/img/earth-day.jpg")
       .bumpImageUrl("https://unpkg.com/three-globe/example/img/earth-topology.png")
